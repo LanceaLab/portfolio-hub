@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1400" viewBox="0 0 2400 1400" fill="none">
+  <rect width="2400" height="1400" fill="#F6F8FB"/>
+  <path d="M0 902C270 830 510 806 754 858C1036 918 1238 1076 1558 1072C1846 1068 2088 948 2400 930V1400H0V902Z" fill="#E9EEF7"/>
+  <path d="M0 1018C330 940 588 976 860 1058C1182 1155 1442 1202 1778 1116C2022 1054 2208 1012 2400 1032V1400H0V1018Z" fill="#EDF7F4" opacity=".82"/>
+  <g opacity=".36" stroke="#DCE2EA" stroke-width="1.5">
+    <path d="M184 262H738"/>
+    <path d="M184 334H594"/>
+    <path d="M184 406H684"/>
+    <path d="M1682 798H2218"/>
+    <path d="M1682 870H2070"/>
+    <path d="M1682 942H2162"/>
+  </g>
+  <g opacity=".44">
+    <rect x="170" y="228" width="520" height="336" rx="22" fill="#FFFFFF" stroke="#DCE2EA"/>
+    <rect x="234" y="300" width="210" height="16" rx="8" fill="#B8D84B"/>
+    <rect x="234" y="364" width="356" height="9" rx="4.5" fill="#B8C1CC"/>
+    <rect x="234" y="412" width="292" height="9" rx="4.5" fill="#B8C1CC"/>
+    <rect x="234" y="460" width="326" height="9" rx="4.5" fill="#B8C1CC"/>
+  </g>
+  <g opacity=".28">
+    <rect x="844" y="758" width="420" height="268" rx="20" fill="#FFFFFF" stroke="#DCE2EA"/>
+    <rect x="908" y="826" width="160" height="12" rx="6" fill="#E86F5D"/>
+    <rect x="908" y="884" width="280" height="8" rx="4" fill="#B8C1CC"/>
+    <rect x="908" y="924" width="222" height="8" rx="4" fill="#B8C1CC"/>
+  </g>
+  <g opacity=".3">
+    <rect x="1494" y="286" width="580" height="346" rx="24" fill="#FFFFFF" stroke="#DCE2EA"/>
+    <rect x="1564" y="360" width="176" height="14" rx="7" fill="#70C7BD"/>
+    <path d="M1566 456C1638 404 1714 410 1792 468C1888 540 1984 534 2052 468" stroke="#5C83D6" stroke-width="8" stroke-linecap="round"/>
+    <path d="M1566 530C1658 492 1724 508 1810 560C1888 608 1984 610 2052 560" stroke="#B8D84B" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g opacity=".3">
+    <rect x="452" y="862" width="260" height="170" rx="18" fill="#171713"/>
+    <rect x="492" y="910" width="96" height="10" rx="5" fill="#B8D84B"/>
+    <rect x="492" y="956" width="152" height="7" rx="3.5" fill="#FFFFFF"/>
+    <rect x="492" y="990" width="112" height="7" rx="3.5" fill="#FFFFFF"/>
+  </g>
+  <g opacity=".22" stroke="#70C7BD" stroke-width="2">
+    <path d="M720 640C890 536 1028 570 1160 660C1318 768 1478 804 1654 690"/>
+    <path d="M768 708C934 634 1052 674 1184 758C1330 852 1480 844 1628 760"/>
+  </g>
+</svg>
