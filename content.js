@@ -38,9 +38,9 @@ window.siteContent = {
         thinking:
           "纳米 Work 要讲的不是「又来了一个 AI 工具」，而是工作关系的变化：人不再事事冲在一线，而是把任务、标准和判断交给工作台，让 Agent 去执行、协作和交付。",
         assets: [
-          { label: "PPT / Deck", title: "产品介绍", text: "后续放纳米 Work 的产品介绍、关键页和完整文件入口。" },
+          { label: "PPT / Deck", title: "产品介绍", text: "这里会放纳米 Work 的产品介绍、关键页和完整文件入口。" },
           { label: "Copy", title: "核心概念表达", text: "围绕 AI 工作台、自动化项目、Agent to Agent 协作等概念做用户语言转译。" },
-          { label: "Result", title: "成果待补", text: "后续补充上线物料、传播数据、用户反馈或内部使用反馈。" },
+          { label: "Result", title: "成果沉淀", text: "这里会沉淀上线物料、传播数据、用户反馈和内部使用反馈。" },
         ],
       },
       {
@@ -65,7 +65,7 @@ window.siteContent = {
         ],
         result: {
           label: "当前可展示成果",
-          text: "形成两版产品介绍 PPT，并搭建配套的传播 Agent / Skill。后续补充 PPT 关键页、Agent 配置截图、Skill 文档和实际使用反馈。",
+          text: "形成两版产品介绍 PPT，并搭建配套的传播 Agent / Skill。公开页先展示表达逻辑和可转发版本，关键页、配置截图和使用反馈继续接入。",
         },
       },
       {
@@ -93,7 +93,7 @@ window.siteContent = {
             button: "查看详情",
           },
           { label: "PPT", title: "短版转化 PPT", text: "把复杂产品压缩成客户能快速理解的套餐、权益和成交表达。", image: "./assets/images/previews/nami-story-intro-p2.jpg", href: "./assets/docs/nami-story-intro.pptx", button: "打开 PPT" },
-          { label: "Result", title: "当前可展示成果", text: "形成 23 页长版产品介绍和 6 页短版转化 PPT。后续补充客户使用场景和转化反馈。" },
+          { label: "Result", title: "当前可展示成果", text: "形成 23 页长版产品介绍和 6 页短版转化 PPT。它们先作为项目成果接入页面，使用场景和转化反馈继续沉淀。" },
         ],
       },
       {
@@ -112,9 +112,9 @@ window.siteContent = {
         thinking:
           "纳米 AI 的关键，不是告诉用户「我们也是一个 AI 助手」，而是让用户明白：当 AI 不再只是聊天，而是开始变成智能体，它会怎样进入一个个真实任务。",
         assets: [
-          { label: "PPT", title: "产品介绍", text: "后续放关键页截图和完整文件入口。" },
-          { label: "Long copy", title: "整体文字表达", text: "后续放产品介绍、传播文案或长篇说明。" },
-          { label: "Result", title: "成果待补", text: "后续补充最终发布、传播数据、用户反馈或项目使用场景。" },
+          { label: "PPT", title: "产品介绍", text: "这里会放关键页截图和完整文件入口。" },
+          { label: "Long copy", title: "整体文字表达", text: "这里会放产品介绍、传播文案或长篇说明。" },
+          { label: "Result", title: "成果沉淀", text: "这里会沉淀最终发布、传播数据、用户反馈和项目使用场景。" },
         ],
       },
     ],
@@ -229,7 +229,7 @@ window.siteContent = {
         {
           label: "AI creative",
           title: "AI 创意短视频",
-          description: "独立视频作品，后续接入本地视频文件。",
+          description: "独立视频作品，接入本地视频文件后可直接在页面内播放。",
           href: "./creative.html",
         },
       ],
@@ -369,7 +369,7 @@ window.siteContent = {
     otherEntrances: {
       eyebrow: "Other entrances",
       title: "其他内容入口",
-      text: "这些内容不放在首页主叙事里，但保留入口，后续可以继续补充。",
+      text: "这些内容不放在首页主叙事里，但保留入口，方便继续扩展。",
       entries: [
         {
           label: "Agents / Skills",
@@ -386,7 +386,7 @@ window.siteContent = {
         {
           label: "Social",
           title: "社媒入口",
-          description: "微信公众号和小红书，后续替换真实主页。",
+          description: "微信公众号和小红书，整理好后替换真实主页。",
           href: "./social.html",
         },
       ],
@@ -411,7 +411,7 @@ window.siteContent = {
     selectedWorks: {
       eyebrow: "Selected works",
       title: "精选短视频作品",
-      text: "先展示已确定的一批作品。后续会继续补全每条视频的单平台数据、全平台累计数据和最终链接。",
+      text: "先展示已确定的一批作品。每条视频会继续补全单平台数据、全平台累计数据和最终链接。",
       file: "./assets/docs/selected-commercial-videos.xlsx",
       button: "打开数据表",
     },
@@ -482,7 +482,7 @@ window.siteContent = {
     agents: {
       eyebrow: "My AI work system",
       title: "目前搭过的几个 Agent 和 Skill",
-      text: "这里先展示框架。后续会补充配置截图、提示词片段、使用场景和实际产出。",
+      text: "这里先展示方法和结构。配置截图、提示词片段、使用场景和实际产出会继续接入。",
       cards: [
         { label: "Agent", title: "公众号爆文主编", text: "把我对公众号内容的选题、标题、结构、开头和传播判断，封装成一个可以协助创作和编辑的角色。" },
         { label: "Agent", title: "社媒传播策划师", text: "把产品传播中的卖点拆解、平台适配、人群判断和传播切口，做成一个可反复调用的策划角色。" },
@@ -522,7 +522,7 @@ window.siteContent = {
         { label: "Humanities", title: "哲学、心理学、传播学", text: "硬科技也需要理解人：人为什么相信、为什么喜欢、为什么愿意行动。传播的对象不是技术，而是人。" },
         { label: "Writing", title: "文字、名著和手写日记", text: "喜欢文字，也保留手写日记的习惯。慢一点的输入，会影响快内容里的判断、节奏和语感。" },
         { label: "Objects", title: "咖啡、杯子、笔记本和笔", text: "喜欢收集具体物件。杯子、笔记本和笔不是装饰，它们让我和日常、手感、秩序、审美保持连接。" },
-        { label: "Books", title: "最近在看", text: "后续放 3 到 6 本最近的书。这里不做大书单，只展示我最近被哪些问题吸引。" },
+        { label: "Books", title: "最近在看", text: "这里会放 3 到 6 本最近的书。不做大书单，只展示我最近被哪些问题吸引。" },
       ],
     },
     impact: {
@@ -544,10 +544,10 @@ window.siteContent = {
     channels: {
       eyebrow: "Channels",
       title: "两个主要入口",
-      text: "账号还在整理，先保留清晰位置。后续这里会替换真实主页链接和代表内容。",
+      text: "账号正在整理，先保留清晰位置。主页链接和代表内容整理好后直接替换。",
       cards: [
-        { label: "微信公众号", title: "长一点的文章和观察", text: "适合放 AI 产品观察、方法论、项目复盘、商业内容和比较完整的想法。", href: "#", cta: "待补主页" },
-        { label: "小红书", title: "更轻的工具、审美和过程记录", text: "适合放 AI 工具体验、Vibe Coding 过程、桌面/笔记本/日常审美和短想法。", href: "#", cta: "待补主页" },
+        { label: "微信公众号", title: "长一点的文章和观察", text: "适合放 AI 产品观察、方法论、项目复盘、商业内容和比较完整的想法。", href: "#", cta: "主页整理中" },
+        { label: "小红书", title: "更轻的工具、审美和过程记录", text: "适合放 AI 工具体验、Vibe Coding 过程、桌面/笔记本/日常审美和短想法。", href: "#", cta: "主页整理中" },
       ],
     },
     expectation: {
@@ -563,10 +563,10 @@ window.siteContent = {
     contact: {
       eyebrow: "Contact",
       title: "联系入口",
-      text: "这里后续放邮箱、微信或二维码。",
+      text: "正式公开前，这里会换成最适合转发的联系入口：邮箱、微信或二维码。",
       cards: [
-        { label: "邮箱", value: "待补", href: "#" },
-        { label: "微信", value: "待补", href: "#" },
+        { label: "邮箱", value: "整理中", href: "#" },
+        { label: "微信", value: "整理中", href: "#" },
       ],
     },
   },
@@ -574,7 +574,7 @@ window.siteContent = {
     hero: {
       eyebrow: "AI creative video",
       title: "这里放我用 AI 做出来的视频。",
-      subtitle: "这部分不以外链为主，后续会直接嵌入本地视频。它展示的不是播放数据，而是我对 AI 视频工具、视觉表达、节奏和创意方向的实际尝试。",
+      subtitle: "这部分不以外链为主，会直接嵌入本地视频。它展示的不是播放数据，而是我对 AI 视频工具、视觉表达、节奏和创意方向的实际尝试。",
     },
     what: {
       eyebrow: "What to show",
@@ -589,14 +589,14 @@ window.siteContent = {
     slots: {
       eyebrow: "Video slots",
       title: "视频展示位",
-      text: "先保留 6 个位置。你后续给本地视频文件后，我会把它们接入页面内播放。",
+      text: "先保留 6 个位置。本地视频文件接入后，可以直接在页面内播放。",
       cards: [
-        { label: "Video 01", title: "AI 创意视频 01", text: "等待本地视频文件。后续补标题、说明和工作流。", src: "" },
-        { label: "Video 02", title: "AI 创意视频 02", text: "等待本地视频文件。后续补标题、说明和工作流。", src: "" },
-        { label: "Video 03", title: "AI 创意视频 03", text: "等待本地视频文件。后续补标题、说明和工作流。", src: "" },
-        { label: "Video 04", title: "AI 创意视频 04", text: "等待本地视频文件。后续补标题、说明和工作流。", src: "" },
-        { label: "Video 05", title: "AI 创意视频 05", text: "等待本地视频文件。后续补标题、说明和工作流。", src: "" },
-        { label: "Video 06", title: "AI 创意视频 06", text: "等待本地视频文件。后续补标题、说明和工作流。", src: "" },
+        { label: "Video 01", title: "AI 创意视频 01", text: "预留给本地视频。接入后补标题、说明和工作流。", src: "" },
+        { label: "Video 02", title: "AI 创意视频 02", text: "预留给本地视频。接入后补标题、说明和工作流。", src: "" },
+        { label: "Video 03", title: "AI 创意视频 03", text: "预留给本地视频。接入后补标题、说明和工作流。", src: "" },
+        { label: "Video 04", title: "AI 创意视频 04", text: "预留给本地视频。接入后补标题、说明和工作流。", src: "" },
+        { label: "Video 05", title: "AI 创意视频 05", text: "预留给本地视频。接入后补标题、说明和工作流。", src: "" },
+        { label: "Video 06", title: "AI 创意视频 06", text: "预留给本地视频。接入后补标题、说明和工作流。", src: "" },
       ],
     },
   },
@@ -604,7 +604,7 @@ window.siteContent = {
     hero: {
       eyebrow: "Works by format",
       title: "按作品类型看",
-      subtitle: "这里不按项目讲故事，只按作品形态集中展示。后续会逐步补真实文件、链接、截图和视频。",
+      subtitle: "这里不按项目讲故事，只按作品形态集中展示。文件、链接、截图和视频会逐步接入。",
     },
     sections: [
       {
@@ -614,8 +614,8 @@ window.siteContent = {
         text: "产品介绍、方案、销售转化 PPT 和长版 PDF。这里适合看我如何把复杂 AI 产品组织成一套可展示、可沟通的材料。",
         tint: false,
         cards: [
-          { label: "纳米 Work", title: "产品介绍与概念表达", text: "待补文件和关键页截图。" },
-          { label: "360 安全龙虾", title: "产品介绍 V1 / V2", text: "原始 PPT 体积过大，先接入轻量详情页，后续补关键页预览。", href: "./safe-lobster-doc.html", button: "查看详情" },
+          { label: "纳米 Work", title: "产品介绍与概念表达", text: "预留给文件和关键页截图。" },
+          { label: "360 安全龙虾", title: "产品介绍 V1 / V2", text: "原始 PPT 体积过大，先接入轻量详情页，关键页预览会继续处理。", href: "./safe-lobster-doc.html", button: "查看详情" },
           {
             label: "纳米漫剧流水线",
             title: "23 页 PDF / PPT",
@@ -633,9 +633,9 @@ window.siteContent = {
         text: "这里放产品介绍、传播文案、长篇说明、项目逻辑拆解，以及未来可站内阅读的文章。",
         tint: true,
         cards: [
-          { label: "Product copy", title: "AI 产品介绍", text: "待补纳米 AI、纳米 Work 等产品介绍文案。" },
-          { label: "Article", title: "Canva / AI 相关文章", text: "待补链接或正文。" },
-          { label: "Logic", title: "传播策略拆解", text: "待补每个项目的表达入口和传播逻辑。" },
+          { label: "Product copy", title: "AI 产品介绍", text: "预留给纳米 AI、纳米 Work 等产品介绍文案。" },
+          { label: "Article", title: "Canva / AI 相关文章", text: "预留给链接或正文。" },
+          { label: "Logic", title: "传播策略拆解", text: "预留给每个项目的表达入口和传播逻辑。" },
         ],
       },
       {
@@ -645,9 +645,9 @@ window.siteContent = {
         text: "这里放 AI 项目中的海报、产品图、视觉物料、案例图和其他图片内容。",
         tint: false,
         cards: [
-          { label: "Image", title: "项目图片 01", text: "待补图片。" },
-          { label: "Image", title: "项目图片 02", text: "待补图片。" },
-          { label: "Image", title: "项目图片 03", text: "待补图片。" },
+          { label: "Image", title: "项目图片 01", text: "预留给项目图片。" },
+          { label: "Image", title: "项目图片 02", text: "预留给项目图片。" },
+          { label: "Image", title: "项目图片 03", text: "预留给项目图片。" },
         ],
       },
       {
@@ -657,9 +657,9 @@ window.siteContent = {
         text: "这里集中展示自建 Agent 和 Skill。完整说明在 Agent / Skill 页面。",
         tint: true,
         cards: [
-          { label: "Agent", title: "公众号爆文主编", text: "待补配置、使用场景和产出。" },
-          { label: "Agent", title: "社媒传播策划师", text: "待补配置、使用场景和产出。" },
-          { label: "Skill", title: "自写 Skill", text: "待补 Skill 文档和示例。" },
+          { label: "Agent", title: "公众号爆文主编", text: "展示配置思路、使用场景和实际产出。" },
+          { label: "Agent", title: "社媒传播策划师", text: "展示配置思路、使用场景和实际产出。" },
+          { label: "Skill", title: "自写 Skill", text: "展示 Skill 文档、适用场景和示例。" },
         ],
       },
       {
@@ -719,7 +719,7 @@ window.siteContent = {
     hero: {
       eyebrow: "Document preview",
       title: "360 安全龙虾产品介绍迭代",
-      subtitle: "这部分先做轻量详情页。原始 PPT 文件非常大，不适合直接放进可转发网页里；当前先展示两版表达的变化，后续再接入压缩后的预览图和轻量文件。",
+      subtitle: "这部分先做轻量详情页。原始 PPT 文件非常大，不适合直接放进可转发网页里；当前展示两版表达的变化，压缩后的预览图和轻量文件会继续接入。",
     },
     overview: {
       eyebrow: "How to read",
@@ -727,16 +727,16 @@ window.siteContent = {
       text: "360 安全龙虾不是只讲一个云端 Agent，而是要让用户理解：它为什么能成为时间、人力和资金上的杠杆。",
       cards: [
         { label: "V1", title: "先让产品变得好理解", text: "早期表达从「更好养、更好用、更省钱」切入，先降低用户理解门槛。" },
-        { label: "V2", title: "再把价值压到一个记忆点", text: "后续表达统一到「杠杆」隐喻，把云端 AI Agent 的价值落到时间、人力、资金三个角度。" },
+        { label: "V2", title: "再把价值压到一个记忆点", text: "表达统一到「杠杆」隐喻，把云端 AI Agent 的价值落到时间、人力、资金三个角度。" },
         { label: "System", title: "配套 Agent 和 Skill", text: "围绕传播工作，继续搭建公众号爆文主编、社媒传播策划师和自写 Skill，把实践方法沉淀成可复用能力。" },
       ],
     },
     preview: {
       eyebrow: "Files",
       title: "文件状态",
-      text: "原始文件目前约 1.1GB 和 593MB，直接放进网页会影响转发和加载。后续处理为压缩 PDF、关键页截图或轻量 PPT 后再接入。",
+      text: "原始文件目前约 1.1GB 和 593MB，直接放进网页会影响转发和加载。处理为压缩 PDF、关键页截图或轻量 PPT 后再接入。",
       file: "#",
-      button: "待补轻量版",
+      button: "轻量版整理中",
       images: [],
     },
   },
@@ -744,7 +744,7 @@ window.siteContent = {
     hero: {
       eyebrow: "Asset library",
       title: "素材库",
-      subtitle: "这里集中放已经接入网页的文件、预览图和后续视频素材路径。它不是对外主页面，主要方便维护作品集。",
+      subtitle: "这里集中放已经接入网页的文件、预览图和视频素材路径。它不是对外主页面，主要方便维护作品集。",
     },
     sections: [
       {
@@ -766,7 +766,7 @@ window.siteContent = {
       {
         title: "视频素材位",
         items: [
-          { label: "Video", title: "AI 创意视频目录", path: "./assets/videos/", note: "后续本地视频放这里，再在编辑器里填完整文件路径。" },
+          { label: "Video", title: "AI 创意视频目录", path: "./assets/videos/", note: "本地视频放这里，再在编辑器里填完整文件路径。" },
         ],
       },
     ],
