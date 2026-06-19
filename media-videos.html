@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>媒体时期商业短视频 | 作品与想法</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html"><span class="brand-mark">LCX</span><span class="brand-text">作品与想法</span></a>
+      <nav class="nav"><a href="./index.html">首页</a><a href="./projects.html">AI 项目</a><a href="./systems.html">Agent / Skill</a><a href="./inputs.html">输入系统</a><a href="./social.html">社媒</a></nav>
+    </header>
+
+    <main>
+      <section class="page-hero section" data-media-hero>
+        <p class="eyebrow" data-eyebrow></p>
+        <h1 data-title></h1>
+        <p class="hero-subtitle" data-subtitle></p>
+      </section>
+
+      <section class="section section-band subtle">
+        <div class="section-heading split" data-media-training-heading>
+          <div>
+            <p class="eyebrow" data-eyebrow></p>
+            <h2 data-title></h2>
+          </div>
+          <p data-text></p>
+        </div>
+        <div class="bridge-grid" data-media-training-grid></div>
+      </section>
+
+      <section class="section featured-case" data-media-featured>
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow" data-eyebrow></p>
+            <h2 data-title></h2>
+          </div>
+          <p data-subtitle></p>
+        </div>
+        <div class="featured-case-panel">
+          <div>
+            <span class="case-label">Selected work</span>
+            <h3 data-case-title></h3>
+            <p data-case-text></p>
+            <ul data-case-notes></ul>
+          </div>
+          <div class="case-metrics" data-case-metrics></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading" data-media-selected-heading>
+          <p class="eyebrow" data-eyebrow></p>
+          <h2 data-title></h2>
+          <p data-text></p>
+          <a class="button secondary" href="./assets/docs/selected-commercial-videos.xlsx" target="_blank" rel="noreferrer" data-media-data-link hidden>打开数据表</a>
+        </div>
+        <div class="video-grid" id="videoGrid"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading" data-media-topic-heading>
+          <p class="eyebrow" data-eyebrow></p>
+          <h2 data-title></h2>
+          <p data-text></p>
+        </div>
+        <div class="topic-grid" data-media-topic-grid></div>
+      </section>
+    </main>
+    <script src="./content.js"></script>
+    <script src="./render.js"></script>
+  </body>
+</html>
