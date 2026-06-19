@@ -12,11 +12,44 @@ function textCard(item) {
   return `<article><span>${item.label}</span><h3>${item.title}</h3><p>${item.text}</p></article>`;
 }
 
+function escapeHTML(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function signalLink(item) {
+  if (typeof item === "string") return `<span>${item}</span>`;
+  return `<a href="${item.href}">${item.label}</a>`;
+}
+
+function portfolioPreview(item) {
+  const tag = item.href ? "a" : "article";
+  const href = item.href ? ` href="${item.href}"` : "";
+  return `
+    <${tag} class="portfolio-preview-card ${item.type || ""}"${href}>
+      <span>${item.label}</span>
+      <strong>${item.title}</strong>
+    </${tag}>
+  `;
+}
+
 function setHero(selector, hero) {
   const root = document.querySelector(selector);
   if (!root || !hero) return;
   root.querySelector("[data-eyebrow]").textContent = hero.eyebrow || "";
-  root.querySelector("[data-title]").textContent = hero.title || "";
+  const title = root.querySelector("[data-title]");
+  if (title) {
+    title.innerHTML = String(hero.title || "")
+      .split("\n")
+      .map((line) => `<span class="hero-title-line">${escapeHTML(line)}</span>`)
+      .join("");
+  }
+  const hello = root.querySelector("[data-hello]");
+  if (hello) hello.textContent = hero.hello || "";
   root.querySelector("[data-subtitle]").textContent = hero.subtitle || "";
 }
 
@@ -41,31 +74,23 @@ function renderPortfolio() {
   const data = window.siteContent?.portfolio;
   if (!data) return;
 
-  const hero = document.querySelector("[data-portfolio-hero]");
-  if (hero) {
-    hero.querySelector("[data-eyebrow]").textContent = data.hero.eyebrow;
-    hero.querySelector("[data-title]").textContent = data.hero.title;
-    hero.querySelector("[data-subtitle]").textContent = data.hero.subtitle;
-  }
+  setHero("[data-portfolio-hero]", data.hero);
 
-  const byFormat = document.querySelector("[data-section='by-format']");
   const recommended = document.querySelector("[data-section='recommended']");
   if (recommended && data.recommended) {
-    recommended.querySelector("[data-eyebrow]").textContent = data.recommended.eyebrow;
-    recommended.querySelector("[data-title]").textContent = data.recommended.title;
+    setHeading("[data-section='recommended'] .section-heading", data.recommended);
     recommended.querySelector("[data-grid]").innerHTML = data.recommended.items.map(entryCard).join("");
   }
 
-  if (byFormat) {
-    byFormat.querySelector("[data-eyebrow]").textContent = data.byFormat.eyebrow;
-    byFormat.querySelector("[data-title]").textContent = data.byFormat.title;
-    byFormat.querySelector("[data-grid]").innerHTML = data.byFormat.items.map(entryCard).join("");
+  const byUseCase = document.querySelector("[data-section='by-use-case']");
+  if (byUseCase) {
+    setHeading("[data-section='by-use-case'] .section-heading", data.byUseCase);
+    byUseCase.querySelector("[data-grid]").innerHTML = data.byUseCase.items.map(entryCard).join("");
   }
 
   const byProject = document.querySelector("[data-section='by-project']");
   if (byProject) {
-    byProject.querySelector("[data-eyebrow]").textContent = data.byProject.eyebrow;
-    byProject.querySelector("[data-title]").textContent = data.byProject.title;
+    setHeading("[data-section='by-project'] .section-heading", data.byProject);
     byProject.querySelector("[data-grid]").innerHTML = data.byProject.items.map(entryCard).join("");
   }
 }
@@ -87,13 +112,13 @@ function renderHomePage() {
   setHero("[data-home-hero]", data.hero);
   const actions = document.querySelector("[data-home-actions]");
   if (actions) {
-    actions.innerHTML = data.hero.actions
+    actions.innerHTML = (data.hero.actions || [])
       .map((action) => `<a class="button ${action.style}" href="${action.href}">${action.label}</a>`)
       .join("");
   }
   const signals = document.querySelector("[data-home-signals]");
   if (signals) {
-    signals.innerHTML = data.hero.signals.map((item) => `<span>${item}</span>`).join("");
+    signals.innerHTML = data.hero.signals.map(signalLink).join("");
   }
 
   const callout = document.querySelector("[data-home-callout]");
@@ -104,11 +129,9 @@ function renderHomePage() {
     const link = callout.querySelector("[data-link]");
     link.textContent = data.portfolioCallout.button;
     link.href = data.portfolioCallout.href;
+    const visuals = callout.querySelector("[data-home-portfolio-visuals]");
+    if (visuals) visuals.innerHTML = data.portfolioCallout.previews.map(portfolioPreview).join("");
   }
-
-  setHeading("[data-home-featured-heading]", data.featuredWorks);
-  const featuredGrid = document.querySelector("[data-home-featured-grid]");
-  if (featuredGrid) featuredGrid.innerHTML = data.featuredWorks.items.map(entryCard).join("");
 
   setHeading("[data-home-ai-heading]", data.aiEra);
   const aiGrid = document.querySelector("[data-home-ai-grid]");
@@ -282,8 +305,11 @@ function renderWorksPage() {
         : "";
       return `
         <section id="${section.id}" class="section work-type-section${tintClass}">
-          <div class="detail-title"><span>${section.number}</span><h2>${section.title}</h2></div>
-          <p class="project-lead">${section.text}</p>
+          <div class="section-heading">
+            <p class="eyebrow">${section.number}</p>
+            <h2>${section.title}</h2>
+            <p>${section.text}</p>
+          </div>
           ${cards}
           ${link}
         </section>
@@ -401,13 +427,9 @@ function renderProject(project) {
 function renderProjectsPage() {
   const data = window.siteContent?.projectsPage;
   if (!data) return;
+  const projectOrder = ["nano-ai", "nami-image", "nami-video", "nami-story", "safe-lobster", "nami-work"];
 
-  const hero = document.querySelector("[data-projects-hero]");
-  if (hero) {
-    hero.querySelector("[data-eyebrow]").textContent = data.hero.eyebrow;
-    hero.querySelector("[data-title]").textContent = data.hero.title;
-    hero.querySelector("[data-subtitle]").textContent = data.hero.subtitle;
-  }
+  setHero("[data-projects-hero]", data.hero);
 
   const evolution = document.querySelector("[data-projects-evolution]");
   if (evolution) {
@@ -418,7 +440,14 @@ function renderProjectsPage() {
 
   const list = document.querySelector("[data-projects-list]");
   if (list) {
-    list.innerHTML = data.projects.map(renderProject).join("");
+    list.innerHTML = [...data.projects]
+      .sort((a, b) => {
+        const aIndex = projectOrder.indexOf(a.id);
+        const bIndex = projectOrder.indexOf(b.id);
+        return (aIndex === -1 ? 999 : aIndex) - (bIndex === -1 ? 999 : bIndex);
+      })
+      .map(renderProject)
+      .join("");
   }
 }
 
