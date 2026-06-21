@@ -40,7 +40,8 @@ function portfolioPreview(item) {
 function setHero(selector, hero) {
   const root = document.querySelector(selector);
   if (!root || !hero) return;
-  root.querySelector("[data-eyebrow]").textContent = hero.eyebrow || "";
+  const eyebrow = root.querySelector("[data-eyebrow]");
+  if (eyebrow) eyebrow.textContent = hero.eyebrow || "";
   const title = root.querySelector("[data-title]");
   if (title) {
     title.innerHTML = String(hero.title || "")
@@ -50,7 +51,8 @@ function setHero(selector, hero) {
   }
   const hello = root.querySelector("[data-hello]");
   if (hello) hello.textContent = hero.hello || "";
-  root.querySelector("[data-subtitle]").textContent = hero.subtitle || "";
+  const subtitle = root.querySelector("[data-subtitle]");
+  if (subtitle) subtitle.textContent = hero.subtitle || "";
 }
 
 function setHeading(selector, data) {
