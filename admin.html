@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>内容编辑器 | 作品与想法</title>
+    <link rel="stylesheet" href="./styles.css?v=20260621-motion2" />
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html"><span class="brand-mark">LCX</span><span class="brand-text">作品与想法</span></a>
+      <nav class="nav"><a href="./index.html">首页</a><a href="./projects.html">AI 项目</a><a href="./portfolio.html">作品集</a></nav>
+    </header>
+
+    <main class="admin-shell">
+      <section class="page-hero section">
+        <p class="eyebrow">Local editor</p>
+        <h1>内容编辑器</h1>
+        <p class="hero-subtitle">支持编辑首页、作品集、AI 项目、商业故事、Agent/Skill、输入系统、社媒和 AI 创意视频。改完后可以直接选择原 content.js 保存，也可以下载或复制新版文件。</p>
+      </section>
+
+      <section class="section admin-actions">
+        <button class="button primary" id="saveToContent">选择原 content.js 并保存</button>
+        <button class="button secondary" id="saveDraft">保存本地草稿</button>
+        <button class="button primary" id="downloadContent">下载新版 content.js</button>
+        <button class="button secondary" id="copyContent">复制新版 content.js</button>
+        <button class="button ghost" id="clearDraft">清除本地草稿</button>
+        <button class="button ghost" id="resetContent">恢复到当前文件内容</button>
+        <a class="button secondary" href="./projects.html" target="_blank" rel="noreferrer">预览 AI 项目页</a>
+        <a class="button secondary" href="./portfolio.html" target="_blank" rel="noreferrer">预览作品集</a>
+        <a class="button secondary" href="./index.html" target="_blank" rel="noreferrer">预览首页</a>
+        <a class="button secondary" href="./assets.html" target="_blank" rel="noreferrer">打开素材库</a>
+        <p id="adminStatus" class="admin-status"></p>
+      </section>
+
+      <section class="section admin-toc" aria-label="编辑区导航">
+        <a href="#edit-project-hero">AI 项目开头</a>
+        <a href="#edit-project-list">项目列表</a>
+        <a href="#edit-portfolio">作品集</a>
+        <a href="#edit-pages">其他页面</a>
+      </section>
+
+      <section class="section admin-editor">
+        <div class="admin-panel" id="edit-project-hero">
+          <h2>页面开头</h2>
+          <label>英文小字<input data-path="projectsPage.hero.eyebrow" /></label>
+          <label>大标题<textarea data-path="projectsPage.hero.title"></textarea></label>
+          <label>说明<textarea data-path="projectsPage.hero.subtitle"></textarea></label>
+        </div>
+
+        <div class="admin-panel">
+          <h2>演进说明</h2>
+          <label>英文小字<input data-path="projectsPage.evolution.eyebrow" /></label>
+          <label>标题<textarea data-path="projectsPage.evolution.title"></textarea></label>
+          <label>说明<textarea data-path="projectsPage.evolution.description"></textarea></label>
+        </div>
+
+        <div class="admin-panel wide" id="edit-project-list">
+          <div class="admin-panel-head">
+            <h2>项目</h2>
+            <button class="button secondary" id="addProject">新增项目</button>
+          </div>
+          <div id="projectEditor"></div>
+        </div>
+
+        <div class="admin-panel wide" id="edit-portfolio">
+          <div class="admin-panel-head">
+            <h2>作品集</h2>
+          </div>
+          <div id="portfolioEditor"></div>
+        </div>
+
+        <div class="admin-panel wide" id="edit-pages">
+          <div class="admin-panel-head">
+            <h2>其他页面内容</h2>
+          </div>
+          <div id="pageContentEditor"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./content.js"></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>

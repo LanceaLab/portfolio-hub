@@ -1,0 +1,222 @@
+.admin-shell .page-hero {
+  padding-bottom: 36px;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.admin-status {
+  width: 100%;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  min-height: 1.4em;
+}
+
+.admin-actions .button {
+  min-height: 42px;
+}
+
+.admin-toc {
+  position: sticky;
+  top: 72px;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(250, 248, 241, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+.admin-toc a {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 12px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.admin-editor {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 28px;
+}
+
+.admin-panel {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.admin-panel.wide {
+  grid-column: 1 / -1;
+}
+
+.admin-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.admin-panel h2 {
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.admin-panel label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.admin-panel input,
+.admin-panel textarea,
+.admin-panel select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 12px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+}
+
+.admin-panel textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.project-edit-card {
+  margin-bottom: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7f5ef;
+}
+
+.admin-detail {
+  display: block;
+}
+
+.admin-detail summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.admin-detail summary::-webkit-details-marker {
+  display: none;
+}
+
+.admin-detail summary::after {
+  content: "展开";
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.admin-detail[open] summary::after {
+  content: "收起";
+}
+
+.admin-detail-body {
+  margin-top: 16px;
+}
+
+.project-edit-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.project-edit-head h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.project-edit-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.admin-subgrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.admin-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 18px;
+}
+
+.small-button {
+  min-height: 34px;
+  border: 1px solid var(--ink);
+  border-radius: 6px;
+  padding: 0 10px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.small-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
+}
+
+.danger {
+  border-color: var(--red);
+  color: #9e2f22;
+}
+
+.admin-section-divider {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .admin-toc {
+    top: 0;
+  }
+
+  .admin-editor,
+  .admin-subgrid {
+    grid-template-columns: 1fr;
+  }
+}
