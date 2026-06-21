@@ -141,7 +141,7 @@ button {
   text-align: left;
   background:
     linear-gradient(180deg, rgba(246, 248, 251, 0.04), rgba(246, 248, 251, 0.82) 78%),
-    url("./assets/images/hero-bg.svg?v=20260621-motion1") center / cover no-repeat;
+    url("./assets/images/hero-bg.svg?v=20260621-motion2") center / cover no-repeat;
 }
 
 .hero-simple .hero-copy {
@@ -333,9 +333,9 @@ p {
 }
 
 .ai-core strong {
-  max-width: 110px;
+  max-width: 132px;
   color: var(--ink);
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.05;
 }
 
@@ -405,10 +405,11 @@ p {
 .ai-node {
   display: grid;
   place-items: center;
-  width: 92px;
-  height: 92px;
+  width: 100px;
+  height: 88px;
   border-radius: 22px;
   animation: ai-node-float 8s ease-in-out infinite;
+  text-align: center;
 }
 
 .ai-node span,
@@ -446,6 +447,23 @@ p {
   animation-delay: -4.8s;
 }
 
+.node-writing {
+  top: 37%;
+  left: 3%;
+  width: 82px;
+  height: 72px;
+  border-radius: 50%;
+  animation-delay: -5.6s;
+}
+
+.node-social {
+  right: 6%;
+  top: 40%;
+  width: 94px;
+  height: 74px;
+  animation-delay: -6.4s;
+}
+
 .ai-panel {
   display: flex;
   align-items: center;
@@ -471,6 +489,12 @@ p {
   bottom: 4%;
   left: 30%;
   animation-delay: -6.8s;
+}
+
+.panel-four {
+  top: 78%;
+  right: 16%;
+  animation-delay: -8.4s;
 }
 
 @keyframes ai-spin {
