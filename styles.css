@@ -141,7 +141,7 @@ button {
   text-align: left;
   background:
     linear-gradient(180deg, rgba(246, 248, 251, 0.04), rgba(246, 248, 251, 0.82) 78%),
-    url("./assets/images/hero-bg.svg?v=20260622-layoutfix") center / cover no-repeat;
+    url("./assets/images/hero-bg.svg?v=20260628-showcase") center / cover no-repeat;
 }
 
 .hero-simple .hero-copy {
@@ -763,11 +763,11 @@ p {
 
 .portfolio-callout {
   display: grid;
-  grid-template-columns: minmax(280px, 390px) minmax(0, 1fr);
-  gap: clamp(28px, 5vw, 64px);
-  align-items: stretch;
-  padding-top: 72px;
-  padding-bottom: 72px;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 72px);
+  align-items: center;
+  padding-top: 86px;
+  padding-bottom: 86px;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -785,7 +785,7 @@ p {
 
 .portfolio-callout h2 {
   margin-bottom: 18px;
-  font-size: clamp(26px, 4vw, 40px);
+  font-size: clamp(30px, 4vw, 46px);
 }
 
 .portfolio-callout p {
@@ -794,15 +794,17 @@ p {
 
 .portfolio-preview-grid {
   display: grid;
+  grid-auto-rows: minmax(138px, auto);
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 }
 
 .portfolio-preview-card {
   position: relative;
-  display: block;
+  display: flex;
   overflow: hidden;
-  min-height: 210px;
+  min-height: 156px;
+  flex-direction: column;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -816,26 +818,46 @@ p {
   box-shadow: var(--shadow);
 }
 
+.portfolio-preview-card.large {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 326px;
+  padding: 24px;
+}
+
 .portfolio-preview-card::before,
 .portfolio-preview-card::after {
   content: "";
   position: absolute;
-  inset: auto 18px 54px 18px;
+  inset: auto 18px 18px 18px;
   height: 62px;
   border-radius: 8px;
   opacity: 0.86;
 }
 
 .portfolio-preview-card::before {
-  background: linear-gradient(135deg, var(--lime), rgba(255, 255, 255, 0.66));
+  background:
+    radial-gradient(circle at 20% 35%, rgba(184, 216, 75, 0.86), transparent 30%),
+    linear-gradient(135deg, rgba(184, 216, 75, 0.42), rgba(255, 255, 255, 0.66));
 }
 
 .portfolio-preview-card::after {
-  inset: auto 38px 118px auto;
+  inset: auto 32px 72px auto;
   width: 74px;
   height: 44px;
   border: 1px solid rgba(23, 23, 19, 0.2);
   background: rgba(255, 255, 255, 0.74);
+}
+
+.portfolio-preview-card.large::before {
+  inset: auto 24px 24px 24px;
+  height: 140px;
+}
+
+.portfolio-preview-card.large::after {
+  inset: auto 48px 176px auto;
+  width: 120px;
+  height: 78px;
 }
 
 .portfolio-preview-card.writing::before {
@@ -854,6 +876,14 @@ p {
   background: linear-gradient(135deg, var(--ink), #54544a);
 }
 
+.portfolio-preview-card.story::before {
+  background: linear-gradient(135deg, var(--red), var(--amber));
+}
+
+.portfolio-preview-card.social::before {
+  background: linear-gradient(135deg, var(--cyan), rgba(255, 255, 255, 0.7));
+}
+
 .portfolio-preview-card span {
   position: relative;
   z-index: 1;
@@ -865,13 +895,30 @@ p {
 }
 
 .portfolio-preview-card strong {
-  position: absolute;
-  right: 18px;
-  bottom: 18px;
-  left: 18px;
+  position: relative;
   z-index: 1;
-  font-size: 18px;
+  margin-top: auto;
+  font-size: 19px;
   line-height: 1.25;
+}
+
+.portfolio-preview-card.large strong {
+  font-size: 28px;
+}
+
+.portfolio-preview-card p {
+  position: relative;
+  z-index: 1;
+  max-width: 260px;
+  margin: 10px 0 76px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.portfolio-preview-card.large p {
+  max-width: 330px;
+  margin-bottom: 142px;
+  font-size: 16px;
 }
 
 .social-links {
@@ -1819,7 +1866,6 @@ p {
   }
 
   .featured-grid,
-  .portfolio-preview-grid,
   .loop,
   .agent-grid,
   .project-grid,
@@ -1846,6 +1892,14 @@ p {
 
   .case-row {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-preview-card.large {
+    grid-column: span 2;
   }
 }
 
@@ -1920,7 +1974,6 @@ p {
 
   .proof-grid,
   .featured-grid,
-  .portfolio-preview-grid,
   .video-grid,
   .placeholder-grid,
   .creative-video-grid,
@@ -1941,6 +1994,20 @@ p {
   .case-profile,
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-preview-card.large {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 230px;
+  }
+
+  .portfolio-preview-card.large p {
+    margin-bottom: 92px;
   }
 
   .work-card,

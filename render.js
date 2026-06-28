@@ -30,9 +30,10 @@ function portfolioPreview(item) {
   const tag = item.href ? "a" : "article";
   const href = item.href ? ` href="${item.href}"` : "";
   return `
-    <${tag} class="portfolio-preview-card ${item.type || ""}"${href}>
+    <${tag} class="portfolio-preview-card ${item.type || ""} ${item.size || ""}"${href}>
       <span>${item.label}</span>
       <strong>${item.title}</strong>
+      ${item.text ? `<p>${item.text}</p>` : ""}
     </${tag}>
   `;
 }
