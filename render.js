@@ -280,7 +280,7 @@ function renderCreativePage() {
         (card) => `
           <article class="creative-video-card">
             <div class="video-frame">${
-              card.src ? `<video src="${card.src}" controls></video>` : `<span>${card.label}</span>`
+              card.src ? `<video src="${card.src}" controls preload="metadata" playsinline></video>` : `<span>${card.label}</span>`
             }</div>
             <h3>${card.title}</h3>
             <p>${card.text}</p>
