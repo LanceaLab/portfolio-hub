@@ -338,13 +338,6 @@ window.siteContent = {
           type: "system",
           href: "./systems.html",
         },
-        {
-          label: "Social",
-          title: "持续更新入口",
-          text: "公众号、小红书和后续动态内容。",
-          type: "social",
-          href: "./social.html",
-        },
       ],
     },
     aiEra: {
@@ -733,12 +726,6 @@ window.siteContent = {
           title: "AI 视觉实验 03",
           text: "竖屏视觉实验，适合移动端观看和社媒内容方向。",
           src: "./assets/videos/creative-ai-visual-03.mp4",
-        },
-        {
-          label: "Long demo",
-          title: "AI 创意长视频实验",
-          text: "较长版本的视频实验，适合后续拆解为完整工作流案例。",
-          src: "./assets/videos/creative-long-demo-01.mp4",
         },
       ],
     },
