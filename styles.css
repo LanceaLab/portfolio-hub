@@ -1586,15 +1586,18 @@ p {
 }
 
 .creative-video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  columns: 3 300px;
+  column-gap: 16px;
 }
 
 .creative-video-card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
+  break-inside: avoid;
   overflow: hidden;
 }
 
@@ -1882,12 +1885,15 @@ p {
 
   .video-grid,
   .placeholder-grid,
-  .creative-video-grid,
   .book-grid,
   .cross-grid,
   .social-links,
   .social-page-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .creative-video-grid {
+    columns: 2 260px;
   }
 
   .case-row {
@@ -1976,7 +1982,6 @@ p {
   .featured-grid,
   .video-grid,
   .placeholder-grid,
-  .creative-video-grid,
   .loop,
   .book-grid,
   .cross-grid,
@@ -2013,5 +2018,9 @@ p {
   .work-card,
   .video-card {
     min-height: auto;
+  }
+
+  .creative-video-grid {
+    columns: 1;
   }
 }

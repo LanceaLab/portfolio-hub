@@ -656,13 +656,13 @@ window.siteContent = {
   creativePage: {
     hero: {
       eyebrow: "AI creative video",
-      title: "这里放我用 AI 做出来的视频。",
-      subtitle: "这部分不以外链为主，会直接嵌入本地视频。它展示的不是播放数据，而是我对 AI 视频工具、视觉表达、节奏和创意方向的实际尝试。",
+      title: "一些用 AI 做出来的视觉实验",
+      subtitle: "这一页先放成片，不放外链。它展示的不是播放数据，而是我对 AI 视频工具、镜头语言、视觉风格和商业表达的实际尝试。",
     },
     what: {
       eyebrow: "What to show",
       title: "每条视频需要说明什么",
-      text: "AI 视频不能只放一个播放器。它需要说明创意目标、使用方式、最后成片，以及这个尝试证明了什么能力。",
+      text: "AI 视频不能只放一个播放器。真正有价值的是说明：我为什么这样做，用了什么方法，最后这个成片证明了什么能力。",
       cards: [
         { label: "01", title: "创意目标", text: "这条视频想表达什么，为什么适合用 AI 做。" },
         { label: "02", title: "工作流", text: "用到哪些 AI 工具，经历了哪些生成、筛选、修改和剪辑步骤。" },
@@ -672,7 +672,7 @@ window.siteContent = {
     slots: {
       eyebrow: "Video slots",
       title: "已经接入的 AI 创意视频",
-      text: "先把本地视频压成网页播放版放上来，方便看整体效果。标题和工作流说明后续还可以继续精修。",
+      text: "先把本地视频压成网页播放版放上来，方便看整体效果。后续会继续补充每条视频的提示词、工具链、修改过程和审美判断。",
       cards: [
         {
           label: "Brand film",
